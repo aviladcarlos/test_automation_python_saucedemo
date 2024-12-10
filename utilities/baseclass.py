@@ -15,7 +15,6 @@ class BaseClass:
     def verify_link_presence(self, text):
         wait = WebDriverWait(self.driver, 10)
         wait.until(expected_conditions.presence_of_element_located((By.LINK_TEXT, text)))
-        # wait.until(expected_conditions.presence_of_element_located((By.LINK_TEXT, "India")))
 
     def select_drop_down_option_by_text(self, locator, text):
         sel = Select(locator)
