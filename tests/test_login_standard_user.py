@@ -1,7 +1,5 @@
 import pytest
 
-import time
-
 from pageobjects.login_page_objects import LoginPageObjects
 from testdata.login_page_data import LoginPageData
 from utilities.baseclass import BaseClass
