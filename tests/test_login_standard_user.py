@@ -19,10 +19,18 @@ class TestLoginStandardUser(BaseClass):
         login_page.password_field().send_keys(login_page_data["password"])
 
         log.info("Clicking 'Login' btn")
+        self.timer_start()
         products_page = login_page.login_btn()
+        self.timer_end()
+
+        # Verifying user has successfully logged in within 2 seconds by using self.timer_start() and self.time_end()
+        # before and after triggering the next page to load with login_page.login_btn().
+        assert self.timer_overall_seconds() < 5, log.critical(
+            f"Test failed: Took {self.timer_overall_seconds()} seconds to login, should be less than 2")
 
         # Verifying user has successfully logged in by checking if they have landed on the Products page.
-        assert "Products" in products_page.page_title().text, log.critical("Test failed: user did not login successfully")
+        assert "Products" in products_page.page_title().text, log.critical(
+            "Test failed: user did not login successfully")
         log.info("User logged in successfully")
 
     @pytest.fixture(params=LoginPageData.standard_user)
