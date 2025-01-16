@@ -6,10 +6,25 @@ from selenium.webdriver.support.wait import WebDriverWait
 import pytest
 import inspect
 import logging
+import time
 
 
 @pytest.mark.usefixtures("setup")
 class BaseClass:
+
+    startime = None
+    endtime = None
+    overalltime = None
+
+    def timer_start(self):
+        self.startime = time.time()
+
+    def timer_end(self):
+        self.endtime = time.time()
+
+    def timer_overall_seconds(self):
+        self.overalltime = self.endtime - self.startime
+        return time.localtime(self.overalltime).tm_sec
 
     def verify_link_presence(self, text):
         wait = WebDriverWait(self.driver, 10)
