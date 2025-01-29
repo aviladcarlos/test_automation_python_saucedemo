@@ -83,6 +83,7 @@ class TestProductsVerifyProductsListed(BaseClass):
         assert (len(products_incorrect_image) == 0
                 and len(products_incorrect_cost) == 0), log.critical(
             "Test failed: 1 or more products on site has incorrect information, view log for more information.")
+
     @pytest.fixture(params=LoginPageData.standard_user)
     def login_page_data(self, request):
         return request.param
