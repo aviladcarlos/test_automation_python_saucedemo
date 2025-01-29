@@ -66,13 +66,14 @@ class TestProductsVerifyProductsListed(BaseClass):
             elif product_name in ProductsPageData.expected_products:
                 log.info(f"Verifying image url and cost of"
                          f" {product_name}")
+
                 # Verify image url matches with expected url
                 if product_image != expected_image:
                     log.critical(f"Test failed: Image url does not match with expected image url:")
                     log.critical(f"Result: {product_image}")
                     log.critical(f"Expected Result: {expected_image}")
                     products_incorrect_image.append(product_name)
-                    
+
                 # Verify displayed cost matches with expected cost
                 if product_cost != expected_cost:
                     log.critical(f"Test failed: Listed cost does not match with expected cost:")
