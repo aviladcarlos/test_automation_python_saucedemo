@@ -72,6 +72,7 @@ class TestProductsVerifyProductsListed(BaseClass):
                     log.critical(f"Result: {product_image}")
                     log.critical(f"Expected Result: {expected_image}")
                     products_incorrect_image.append(product_name)
+                    
                 # Verify displayed cost matches with expected cost
                 if product_cost != expected_cost:
                     log.critical(f"Test failed: Listed cost does not match with expected cost:")
