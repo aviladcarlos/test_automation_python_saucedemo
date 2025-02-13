@@ -1,6 +1,7 @@
 class LoginPageData:
 
-    standard_user = [{"username": "standard_user", "password": "secret_sauce"}]
+    standard_user = [{"username": "standard_user", "password": "secret_sauce", "first name": "standard",
+                      "last name": "user", "zip code": "77777"}]
     locked_out_user = [{"username": "locked_out_user", "password": "secret_sauce"}]
     problem_user = [{"username": "problem_user", "password": "secret_sauce"}]
     performance_glitch_user = [{"username": "performance_glitch_user", "password": "secret_sauce"}]
