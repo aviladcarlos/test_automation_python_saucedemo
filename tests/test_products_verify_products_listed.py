@@ -8,7 +8,7 @@ from utilities.baseclass import BaseClass
 
 class TestProductsVerifyProductsListed(BaseClass):
 
-    def test_products_verifyproductslisted(self, login_page_data):
+    def test_products_verify_products_listed(self, login_page_data):
 
         log = self.get_logger()
         login_page = LoginPageObjects(self.driver)

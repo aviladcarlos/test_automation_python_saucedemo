@@ -5,9 +5,9 @@ from testdata.login_page_data import LoginPageData
 from utilities.baseclass import BaseClass
 
 
-class TestLoginStandardUser(BaseClass):
+class TestLoginPerformanceGlitchUser(BaseClass):
 
-    def test_login_standard_user(self, login_page_data):
+    def test_login_performance_glitch_user(self, login_page_data):
 
         log = self.get_logger()
         login_page = LoginPageObjects(self.driver)

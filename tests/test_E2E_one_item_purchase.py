@@ -6,9 +6,9 @@ from testdata.products_page_data import ProductsPageData
 from utilities.baseclass import BaseClass
 
 
-class TestProductsVerifyProductsListed(BaseClass):
+class TestE2EOneItemPurchase(BaseClass):
 
-    def test_products_verifyproductslisted(self, login_page_data):
+    def test_e2e_one_item_purchase(self, login_page_data):
 
         log = self.get_logger()
         login_page = LoginPageObjects(self.driver)

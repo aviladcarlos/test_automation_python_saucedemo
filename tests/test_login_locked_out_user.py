@@ -9,7 +9,7 @@ from utilities.baseclass import BaseClass
 
 class TestLoginLockedOutUser(BaseClass):
 
-    def test_login_standard_user(self, login_page_data):
+    def test_login_locked_out_user(self, login_page_data):
 
         log = self.get_logger()
         login_page = LoginPageObjects(self.driver)
