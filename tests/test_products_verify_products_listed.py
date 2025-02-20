@@ -13,13 +13,13 @@ class TestProductsVerifyProductsListed(BaseClass):
         log = self.get_logger()
         login_page = LoginPageObjects(self.driver)
 
-        log.info(f"Entering '{login_page_data["username"]}' for username")
+        log.info(f'Entering "{login_page_data["username"]}" for username')
         login_page.username_field().send_keys(login_page_data["username"])
 
-        log.info(f"Entering password for '{login_page_data["username"]}'")
+        log.info(f'Entering password for "{login_page_data["username"]}"')
         login_page.password_field().send_keys(login_page_data["password"])
 
-        log.info("Clicking 'Login' btn")
+        log.info('Clicking "Login" btn')
         products_page = login_page.login_btn()
 
         # Verifying user has successfully logged in by checking if they have landed on the Products page.
@@ -61,11 +61,11 @@ class TestProductsVerifyProductsListed(BaseClass):
             expected_cost = ProductsPageData.expected_products[product.find_element(*products_page.productlist_name).text]["cost"]
 
             if product_name not in ProductsPageData.expected_products:
-                log.critical(f"{product_name}"
+                log.critical(f'"{product_name}"'
                              f" was not found in expected product list!")
             elif product_name in ProductsPageData.expected_products:
                 log.info(f"Verifying image url and cost of"
-                         f" {product_name}")
+                         f' "{product_name}"')
 
                 # Verify image url matches with expected url
                 if product_image != expected_image:

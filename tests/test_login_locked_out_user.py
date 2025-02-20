@@ -14,13 +14,13 @@ class TestLoginLockedOutUser(BaseClass):
         log = self.get_logger()
         login_page = LoginPageObjects(self.driver)
 
-        log.info(f"Entering '{login_page_data["username"]}' for username")
+        log.info(f'Entering "{login_page_data["username"]}" for username')
         login_page.username_field().send_keys(login_page_data["username"])
 
-        log.info(f"Entering password for '{login_page_data["username"]}'")
+        log.info(f'Entering password for "{login_page_data["username"]}"')
         login_page.password_field().send_keys(login_page_data["password"])
 
-        log.info("Clicking 'Login' btn")
+        log.info('Clicking "Login" btn')
         login_page.login_btn()
 
         # Verifying locked out message is displayed when user attempts to login with a locked out user.
