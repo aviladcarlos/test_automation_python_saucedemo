@@ -1,0 +1,51 @@
+2025-06-03 18:08:06,602 : INFO : test_e2e_few_items_purchase : Entering "standard_user" for username
+2025-06-03 18:08:06,638 : INFO : test_e2e_few_items_purchase : Entering password for "standard_user"
+2025-06-03 18:08:06,646 : INFO : test_e2e_few_items_purchase : Clicking "Login" btn
+2025-06-03 18:08:06,873 : INFO : test_e2e_few_items_purchase : User logged in successfully
+2025-06-03 18:08:06,880 : INFO : test_e2e_few_items_purchase : Adding "Sauce Labs Backpack" to cart
+2025-06-03 18:08:07,098 : INFO : test_e2e_few_items_purchase : Adding "Sauce Labs Fleece Jacket" to cart
+2025-06-03 18:08:07,307 : INFO : test_e2e_few_items_purchase : Adding "Sauce Labs Onesie" to cart
+2025-06-03 18:08:07,517 : INFO : test_e2e_few_items_purchase : Navigating to cart page
+2025-06-03 18:08:07,754 : INFO : test_e2e_few_items_purchase : Clicking 'Checkout' button
+2025-06-03 18:08:07,962 : INFO : test_e2e_few_items_purchase : Entering "standard" for first name
+2025-06-03 18:08:07,975 : INFO : test_e2e_few_items_purchase : Entering "user" for last name
+2025-06-03 18:08:07,982 : INFO : test_e2e_few_items_purchase : Entering "77777" for zip/postal code
+2025-06-03 18:08:07,989 : INFO : test_e2e_few_items_purchase : Clicking "Continue" button
+2025-06-03 18:08:08,223 : INFO : test_e2e_few_items_purchase : Clicking "Finish" button
+2025-06-03 18:08:08,433 : INFO : test_e2e_few_items_purchase : Purchase of "Sauce Labs Backpack", "Sauce Labs Fleece Jacket", "Sauce Labs Onesie" was successful
+2025-06-03 18:08:16,851 : INFO : test_e2e_one_item_purchase : Entering "standard_user" for username
+2025-06-03 18:08:16,888 : INFO : test_e2e_one_item_purchase : Entering password for "standard_user"
+2025-06-03 18:08:16,897 : INFO : test_e2e_one_item_purchase : Clicking "Login" btn
+2025-06-03 18:08:17,122 : INFO : test_e2e_one_item_purchase : User logged in successfully
+2025-06-03 18:08:17,128 : INFO : test_e2e_one_item_purchase : Adding "Sauce Labs Backpack" to cart
+2025-06-03 18:08:17,355 : INFO : test_e2e_one_item_purchase : Navigating to cart page
+2025-06-03 18:08:17,575 : INFO : test_e2e_one_item_purchase : Clicking "Checkout" button
+2025-06-03 18:08:17,783 : INFO : test_e2e_one_item_purchase : Entering "standard" for first name
+2025-06-03 18:08:17,796 : INFO : test_e2e_one_item_purchase : Entering "user" for last name
+2025-06-03 18:08:17,803 : INFO : test_e2e_one_item_purchase : Entering "77777" for zip/postal code
+2025-06-03 18:08:17,812 : INFO : test_e2e_one_item_purchase : Clicking "Continue" button
+2025-06-03 18:08:18,030 : INFO : test_e2e_one_item_purchase : Clicking "Finish" button
+2025-06-03 18:08:18,241 : INFO : test_e2e_one_item_purchase : Purchase of "Sauce Labs Backpack" was successful
+2025-06-03 18:08:26,762 : INFO : test_login_locked_out_user : Entering "locked_out_user" for username
+2025-06-03 18:08:26,798 : INFO : test_login_locked_out_user : Entering password for "locked_out_user"
+2025-06-03 18:08:26,806 : INFO : test_login_locked_out_user : Clicking "Login" btn
+2025-06-03 18:08:27,039 : INFO : test_login_locked_out_user : User locked out message displayed successfully
+2025-06-03 18:08:27,040 : INFO : test_login_locked_out_user : User remains on login page after locked out message
+2025-06-03 18:08:35,541 : INFO : test_login_performance_glitch_user : Entering "performance_glitch_user" for username
+2025-06-03 18:08:35,580 : INFO : test_login_performance_glitch_user : Entering password for "performance_glitch_user"
+2025-06-03 18:08:35,588 : INFO : test_login_performance_glitch_user : Clicking "Login" btn
+2025-06-03 18:08:40,807 : CRITICAL : test_login_performance_glitch_user : Test failed: Took 5 seconds to login, should be less than 2
+2025-06-03 18:08:49,323 : INFO : test_login_standard_user : Entering "standard_user" for username
+2025-06-03 18:08:49,361 : INFO : test_login_standard_user : Entering password for "standard_user"
+2025-06-03 18:08:49,369 : INFO : test_login_standard_user : Clicking "Login" btn
+2025-06-03 18:08:49,598 : INFO : test_login_standard_user : User logged in successfully
+2025-06-03 18:08:58,243 : INFO : test_products_verify_products_listed : Entering "standard_user" for username
+2025-06-03 18:08:58,279 : INFO : test_products_verify_products_listed : Entering password for "standard_user"
+2025-06-03 18:08:58,287 : INFO : test_products_verify_products_listed : Clicking "Login" btn
+2025-06-03 18:08:58,515 : INFO : test_products_verify_products_listed : User logged in successfully
+2025-06-03 18:08:58,551 : INFO : test_products_verify_products_listed : Verifying image url and cost of "Sauce Labs Backpack"
+2025-06-03 18:08:58,566 : INFO : test_products_verify_products_listed : Verifying image url and cost of "Sauce Labs Bike Light"
+2025-06-03 18:08:58,581 : INFO : test_products_verify_products_listed : Verifying image url and cost of "Sauce Labs Bolt T-Shirt"
+2025-06-03 18:08:58,596 : INFO : test_products_verify_products_listed : Verifying image url and cost of "Sauce Labs Fleece Jacket"
+2025-06-03 18:08:58,610 : INFO : test_products_verify_products_listed : Verifying image url and cost of "Sauce Labs Onesie"
+2025-06-03 18:08:58,625 : INFO : test_products_verify_products_listed : Verifying image url and cost of "Test.allTheThings() T-Shirt (Red)"
