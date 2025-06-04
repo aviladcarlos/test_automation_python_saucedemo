@@ -1,7 +1,5 @@
 ## Overview
-For my first QA automation project, I built a test automation framework using the practice website Sauce Demo(https://www.saucedemo.com/). Applying what I've learned from Udemy courses, I structured the framework following the Page Object Model (POM) design pattern.
-
-The framework supports multiple browsers, generates detailed HTML reports, logging, and automatically captures screenshots upon test failures. It is developed using Python, Selenium WebDriver, Pytest, and Pytest-html.
+For my first QA automation project, I built a test automation framework using the practice website Sauce Demo(https://www.saucedemo.com/). Applying what I've learned from Udemy courses, I structured the framework following the Page Object Model (POM) design pattern. The framework supports multiple browsers, generates detailed HTML reports, logging, and automatically captures screenshots upon test failures.
 
 ## Created With
 | Name | Version |
