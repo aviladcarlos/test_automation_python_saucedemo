@@ -7,7 +7,7 @@ For my first QA automation project, I built a test automation framework using th
 | [Python](https://www.python.org/) | 3.12.4 |
 | [Pytest](https://pypi.org/project/pytest/) | 8.3.3 |
 | [Pytest-html]( https://pypi.org/project/pytest-html/) | 4.1.1 |
-| [Selenium](https://pypi.org/project/selenium/) | 4.24.0 |
+| [Selenium](https://pypi.org/project/selenium/) | 4.36.0 |
 ## Walkthrough
 [![Walkthrough Video](https://github.com/user-attachments/assets/be1cbde6-94d0-40c5-9faa-b925ce0cb501)](https://drive.google.com/file/d/1Q3soSmEk7vSJ1OlhLwU3In3mxGzJTMmL/view?usp=drive_link)
 ## Usage
