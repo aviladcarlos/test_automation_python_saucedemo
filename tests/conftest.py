@@ -10,7 +10,12 @@ driver = None
 
 def pytest_addoption(parser):
     parser.addoption(
-        "--browser_name", action="store", default="chrome", help="my option: type1 or type2"
+        "--local_browser", action="store", default="chrome", choices=("chrome", "firefox", "edge"),
+        help="Specify browser to run locally (e.g., chrome, firefox, edge)"
+    )
+    parser.addoption(
+        "--docker_browser", action="store", default="", choices=("chrome", "firefox", "edge"),
+        help="Specify browser to run in docker (e.g., chrome, firefox, edge)"
     )
 
 
@@ -19,21 +24,33 @@ def setup(request):
 
     global driver
 
-    browser_name = request.config.getoption("browser_name")
+    local_browser = request.config.getoption("local_browser")
+    docker_browser = request.config.getoption("docker_browser")
 
-    if browser_name == "chrome":
-        driver = webdriver.Chrome()
-    elif browser_name == "firefox":
-        driver = webdriver.Firefox()
-    elif browser_name == "ie":
-        driver = webdriver.Ie()
+    if docker_browser == "chrome":
+        driver = webdriver.Remote(command_executor="http://selenium-chrome:4444",
+                                  options=webdriver.ChromeOptions())
+    elif docker_browser == "firefox":
+        driver = webdriver.Remote(command_executor="http://selenium-firefox:4444",
+                                  options=webdriver.FirefoxOptions())
+    elif docker_browser == "edge":
+        driver = webdriver.Remote(command_executor="http://selenium-edge:4444",
+                                  options=webdriver.EdgeOptions())
+
+    if docker_browser == "":
+        if local_browser == "chrome":
+            driver = webdriver.Chrome()
+        elif local_browser == "firefox":
+            driver = webdriver.Firefox()
+        elif local_browser == "edge":
+            driver = webdriver.Edge()
 
     driver.get("https://www.saucedemo.com/")
     driver.implicitly_wait(5)
     driver.maximize_window()
     request.cls.driver = driver
     yield
-    driver.close()
+    driver.quit()
 
 
 @pytest.hookimpl(tryfirst=True)

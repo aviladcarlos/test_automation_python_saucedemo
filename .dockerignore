@@ -1,0 +1,9 @@
+/pageobjects/__pycache__
+reports/assets
+reports/*.log
+reports/*.html
+reports/*.png
+/testdata/__pycache__
+/tests/__pycache__
+/tests/.pytest_cache
+/utilities/__pycache__
