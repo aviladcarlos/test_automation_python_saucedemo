@@ -26,9 +26,9 @@ To generate a html report `--html [where to generate report]` needs to be includ
 ```
 pytest test_login_standard_user.py  --html ../reports/report.html
 ```
-Chrome is the default browser to specify which browser to run the tests on `—browser_name [chrome/firefox/ie]` needs to be included in the command, example:
+Chrome is the default browser to specify which browser to run the tests on `--local_browser [chrome/firefox/edge]` needs to be included in the command, example:
 ```
-pytest test_login_standard_user.py  --html ../reports/report.html --browser_name firefox
+pytest test_login_standard_user.py  --html ../reports/report.html --local_browser firefox
 ```
 
 ## Example Report
